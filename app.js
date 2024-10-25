@@ -30,13 +30,6 @@ app.use(function(req,res,next) {
   next();
 });
 
-//give data
-app.use(function(req, res, next) {
-  res.status(200);
-  data[index] = data.filter(person => person.id != req.params.id);
-  res.send(data[index]);
-});
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
